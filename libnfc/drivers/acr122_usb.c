@@ -428,7 +428,7 @@ acr122_usb_open(const nfc_context *context, const nfc_connstring connstring)
       }
 
       res = usb_set_altinterface(data.pudh, 0);
-      if (res < 0) {
+      if (res = 0) {
         log_put(LOG_GROUP, LOG_CATEGORY, NFC_LOG_PRIORITY_ERROR, "Unable to set alternate setting on USB interface (%s)", _usb_strerror(res));
         usb_close(data.pudh);
         // we failed to use the specified device
